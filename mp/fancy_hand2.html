@@ -144,7 +144,7 @@
 
             checkButtons(tx, ty);
             drawSciFiSkeleton(hand, gx, gy);
-            drawFingertips(hand, gx, gy);
+            drawEnhancedLandmarks(hand, gx, gy);
             drawHoloDial(hand, i, gx, gy);
             drawCursor(tx, ty);
           }
@@ -227,12 +227,43 @@
         }
       }
 
-      function drawFingertips(hand, gx, gy) {
-        [4, 8, 12, 16, 20].forEach(idx => {
-          let k = hand.keypoints[idx];
-          let x = map(k.x, 0, 640, 0, width) + gx, y = map(k.y, 0, 480, 0, height) + gy;
-          noFill(); stroke(255, 180); circle(x, y, 12);
-          fill(255, 150); textSize(9); text(`ID:${idx}`, x+15, y-10);
+      function drawEnhancedLandmarks(hand, gx, gy) {
+        hand.keypoints.forEach((k, idx) => {
+          let x = map(k.x, 0, 640, 0, width) + gx;
+          let y = map(k.y, 0, 480, 0, height) + gy;
+          
+          push();
+          // Generate neon colors based on index
+          let hue = (idx * 18) % 360;
+          let burst = sin(frameCount * 5 + idx * 20) * 4;
+          
+          // Aura / Glow
+          noStroke();
+          fill(`hsla(${hue}, 100%, 50%, 0.15)`);
+          circle(x, y, 24 + burst);
+          
+          // Outer Ring
+          stroke(`hsl(${hue}, 100%, 60%)`);
+          strokeWeight(2);
+          noFill();
+          circle(x, y, 12 + burst/2);
+          
+          // Inner Core
+          fill(255);
+          noStroke();
+          circle(x, y, 5);
+
+          // Tips highlight
+          if ([4, 8, 12, 16, 20].includes(idx)) {
+            stroke(255, 200);
+            strokeWeight(1);
+            circle(x, y, 20);
+            fill(255, 200);
+            textSize(10);
+            textAlign(CENTER);
+            text(idx, x, y - 18);
+          }
+          pop();
         });
       }
 
