@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>股市社交生存指南 | M11416222</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+TC:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        cyber: {
+                            black: '#050505',
+                            dark: '#0a0a0c',
+                            accent: '#00f2ff',
+                            purple: '#7000ff',
+                            pink: '#ff007a',
+                            gray: '#1a1a1e',
+                        }
+                    },
+                    fontFamily: {
+                        display: ['Outfit', 'Noto Sans TC', 'sans-serif'],
+                        body: ['Noto Sans TC', 'sans-serif'],
+                    },
+                    animation: {
+                        'glow': 'glow 3s ease-in-out infinite alternate',
+                        'float': 'float 6s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        glow: {
+                            '0%': { boxShadow: '0 0 5px rgba(0, 242, 255, 0.2), 0 0 10px rgba(0, 242, 255, 0.1)' },
+                            '100%': { boxShadow: '0 0 20px rgba(0, 242, 255, 0.6), 0 0 40px rgba(112, 0, 255, 0.4)' },
+                        },
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #050505;
+            color: #e0e0e0;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #00f2ff 0%, #7000ff 50%, #ff007a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .banner-mask {
+            mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 6px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #050505;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 10px;
+        }
+        .floating-id {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+    </style>
+</head>
+<body class="font-body custom-scrollbar">
+
+    <!-- Fixed Student ID Badge -->
+    <div class="fixed top-10 right-6 z-50 floating-id pointer-events-none">
+        <span class="text-cyber-accent opacity-40 font-display font-bold tracking-widest text-sm">M11416222</span>
+    </div>
+
+    <!-- Background Elements -->
+    <div class="fixed top-0 left-0 w-full h-full -z-10 overflow-hidden pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-cyber-purple opacity-10 blur-[120px]"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-cyber-accent opacity-5 blur-[150px]"></div>
+    </div>
+
+    <!-- Header Section -->
+    <header class="relative w-full h-screen flex flex-col items-center justify-center overflow-hidden px-6">
+        <div class="absolute inset-0 z-0 opacity-60">
+            <img src='https://opal.google/board/blobs/485723eb-3493-4d80-96a4-74eacd986c7d' alt='Tech Banner' class="w-full h-full object-cover banner-mask" />
+        </div>
+        
+        <div class="relative z-10 max-w-5xl text-center space-y-6">
+            <div class="inline-block px-4 py-1 rounded-full border border-cyber-accent/30 bg-cyber-accent/10 text-cyber-accent text-sm font-bold tracking-[0.2em] mb-4 animate-pulse">
+                TECH INSIGHT 2024
+            </div>
+            <h1 class="text-5xl md:text-8xl font-display font-extrabold leading-tight tracking-tighter">
+                股市也要 <span class="text-gradient">社交？</span><br/>
+                <span class="text-white">生存指南</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-400 font-light max-w-2xl mx-auto leading-relaxed">
+                從「鄉民」到「AI 戰友」的進化史，探索台灣投資界的數位社交實驗。
+            </p>
+            <div class="pt-10">
+                <a href="#content" class="px-8 py-4 bg-white text-black font-bold rounded-full hover:bg-cyber-accent hover:text-black transition-all duration-300 transform hover:scale-105 shadow-[0_0_20px_rgba(255,255,255,0.3)]">
+                    開始探索
+                </a>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-40">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
+        </div>
+    </header>
+
+    <main id="content" class="max-w-6xl mx-auto px-6 py-24 space-y-32">
+        
+        <!-- Intro Section -->
+        <section class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+            <div class="md:col-span-7 space-y-6">
+                <h2 class="text-3xl font-bold text-white flex items-center gap-3">
+                    <span class="w-8 h-[2px] bg-cyber-accent"></span>
+                    前言
+                </h2>
+                <div class="text-lg text-gray-300 leading-relaxed space-y-4">
+                    <p>
+                        在金融市場裡，有一句老話說：「行情總在絕望中誕生，在半信半疑中成長。」但對現代台灣投資人而言，這句話得改一改：<span class="text-cyber-accent font-bold">行情往往是在討論區的吵架中誕生，在神人的開釋下成長。</span>
+                    </p>
+                    <p>
+                        如果您以為投資只是盯著冰冷的 K 線圖和財務指標，那您可能只觸及了股市的表層。在台灣，股市不僅是資本的博弈，更是一場宏大的「數位社交實驗」。
+                    </p>
+                </div>
+            </div>
+            <div class="md:col-span-5">
+                <div class="glass-card p-8 border-cyber-accent/20 animate-glow">
+                    <div class="text-cyber-accent font-display text-4xl font-black mb-2 italic">M11416222</div>
+                    <p class="text-xs tracking-widest text-gray-500 uppercase">Verification Identity</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bento Grid: The Five Factions -->
+        <section class="space-y-12">
+            <div class="text-center space-y-4">
+                <h2 class="text-4xl font-bold text-white">🏛️ 五大門派大點名</h2>
+                <p class="text-gray-400">你今天在哪裡灌水？</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- PTT -->
+                <div class="glass-card p-8 md:col-span-2 group hover:border-cyber-purple transition-all duration-500">
+                    <div class="flex justify-between items-start mb-6">
+                        <h3 class="text-2xl font-bold text-white">PTT Stock（股票板）</h3>
+                        <span class="px-3 py-1 text-xs rounded-full bg-cyber-purple/20 text-cyber-purple border border-cyber-purple/30">江湖聖地</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-4">
+                        身為台灣歷史最悠久、影響力最大的 BBS 討論區，這裡是「鄉民」的聚落。想看大神曬單獲利數千萬？或是失意散戶的「畢業文」？來這裡就對了。
+                    </p>
+                    <div class="h-1 w-0 group-hover:w-full bg-cyber-purple transition-all duration-700"></div>
+                </div>
+
+                <!-- Dcard -->
+                <div class="glass-card p-8 group hover:border-cyber-accent transition-all duration-500">
+                    <h3 class="text-xl font-bold text-white mb-4">Dcard 理財板</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                        小鮮肉與小仙女的實驗室。Z 世代對財務自由的初步焦慮與嘗試，氣氛相對溫和、清新。
+                    </p>
+                    <span class="text-cyber-accent text-xs font-bold">#Z世代 #理財新手</span>
+                </div>
+
+                <!-- CMoney -->
+                <div class="glass-card p-8 group hover:border-cyber-pink transition-all duration-500">
+                    <h3 class="text-xl font-bold text-white mb-4">股市爆料同學會</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        投資人的 Facebook。資訊極其零碎且快速，適合喜歡「邊打仗邊聊天」的戰士型玩家。
+                    </p>
+                </div>
+
+                <!-- Mobile01 & FB/Line -->
+                <div class="glass-card p-8 md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-2">Mobile01 投資區</h3>
+                        <p class="text-gray-400 text-sm">追求「歲月靜好」與「穩定現金流」的熟男專區，在意退休後的尊嚴。</p>
+                    </div>
+                    <div>
+                        <h3 class="text-lg font-bold text-white mb-2">FB 社團與 LINE 群組</h3>
+                        <p class="text-gray-400 text-sm">資訊的混沌地帶。高手交流的後花園，也是詐騙集團最容易滲透的重災區。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Time Machine Section -->
+        <section class="relative py-20">
+            <div class="absolute inset-0 bg-cyber-accent/5 -skew-y-3 rounded-[3rem]"></div>
+            <div class="relative z-10 px-8 space-y-12">
+                <h2 class="text-4xl font-bold text-center text-white italic tracking-tighter">🕰️ 時光機啟動！數位進化史</h2>
+                
+                <div class="space-y-8">
+                    <div class="flex gap-6 items-start group">
+                        <div class="text-cyber-accent font-display text-2xl font-bold pt-1 opacity-50 group-hover:opacity-100 transition-opacity">1990s</div>
+                        <div class="space-y-2">
+                            <h4 class="text-white font-bold text-xl">石器時代：BBS 的螢光火</h4>
+                            <p class="text-gray-400">散戶靠 PTT 等 BBS 站台互通有無。那是純真的年代，在黑白螢幕下點火取暖。</p>
+                        </div>
+                    </div>
+                    
+                    <div class="flex gap-6 items-start group">
+                        <div class="text-cyber-purple font-display text-2xl font-bold pt-1 opacity-50 group-hover:opacity-100 transition-opacity">2000s</div>
+                        <div class="space-y-2">
+                            <h4 class="text-white font-bold text-xl">大部落格時代：資訊平民化</h4>
+                            <p class="text-gray-400">Web 2.0 興起，專業走進平民。財報狗等專業平台崛起，投資研究不再是專利。</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-6 items-start group">
+                        <div class="text-cyber-pink font-display text-2xl font-bold pt-1 opacity-50 group-hover:opacity-100 transition-opacity">2015s</div>
+                        <div class="space-y-2">
+                            <h4 class="text-white font-bold text-xl">大行動時代：口袋裡的賭場</h4>
+                            <p class="text-gray-400">「少年股神」湧入市場，股市討論從「非即時」轉向「盤中即時」，股市成了社交遊戲。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Current Trends -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div class="space-y-8">
+                <h2 class="text-4xl font-bold text-white">📈 現在流行聊什麼？</h2>
+                <div class="space-y-6">
+                    <div class="p-6 rounded-2xl bg-gradient-to-r from-gray-900 to-transparent border-l-4 border-cyber-accent">
+                        <h4 class="text-white font-bold mb-2">「無腦存股」的新信仰</h4>
+                        <p class="text-gray-400 text-sm">高股息 ETF 變成全民運動。主流觀點不再是「誰賺得快」，而是「誰領得久」。</p>
+                    </div>
+                    <div class="p-6 rounded-2xl bg-gradient-to-r from-gray-900 to-transparent border-l-4 border-cyber-purple">
+                        <h4 class="text-white font-bold mb-2">反向指標「冥燈」文化</h4>
+                        <p class="text-gray-400 text-sm">台灣特有的群眾心理。對於群體瘋狂的警覺，是散戶千錘百鍊後的自產幽默。</p>
+                    </div>
+                </div>
+            </div>
+            <div class="flex items-center justify-center">
+                <div class="relative w-full aspect-square max-w-sm">
+                    <div class="absolute inset-0 bg-cyber-accent opacity-20 rounded-full blur-3xl animate-glow"></div>
+                    <div class="absolute inset-10 border-2 border-dashed border-cyber-accent/30 rounded-full animate-[spin_20s_linear_infinite]"></div>
+                    <div class="absolute inset-0 flex items-center justify-center text-center p-12">
+                        <p class="text-cyber-accent font-display text-2xl font-black uppercase tracking-widest leading-tight">
+                            Trend<br/>Insight<br/>M11416222
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Warning Section -->
+        <section class="glass-card p-12 border-red-900/30 overflow-hidden relative">
+            <div class="absolute top-0 right-0 p-4 opacity-10">
+                <svg class="w-48 h-48 text-red-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+            </div>
+            <div class="relative z-10 space-y-8">
+                <h2 class="text-4xl font-bold text-white">⚠️ 股市水很深：小心韭菜！</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div class="space-y-4">
+                        <h4 class="text-red-400 font-bold">詐騙「老師」</h4>
+                        <p class="text-sm text-gray-400">主動想帶你飛的人，通常只是想讓你當他降落時的肉墊。</p>
+                    </div>
+                    <div class="space-y-4">
+                        <h4 class="text-red-400 font-bold">網軍帶風向</h4>
+                        <p class="text-sm text-gray-400">看似研究透徹的利多，可能是主力為了出貨編織的劇本。</p>
+                    </div>
+                    <div class="space-y-4">
+                        <h4 class="text-red-400 font-bold">法規紅線</h4>
+                        <p class="text-sm text-gray-400">匿名發廢文雖痛快，但散布謠言可能觸及《證券交易法》。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Future AI Section -->
+        <section class="space-y-12">
+            <div class="flex flex-col md:flex-row justify-between items-end gap-6 border-b border-gray-800 pb-8">
+                <h2 class="text-5xl font-extrabold text-white">🚀 股市航海王 2.0</h2>
+                <p class="text-cyber-accent font-display tracking-[0.5em]">THE FUTURE IS AI</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="p-8 rounded-3xl bg-cyber-gray hover:bg-cyber-accent/10 transition-colors cursor-default border border-transparent hover:border-cyber-accent/50 group">
+                    <h4 class="text-xl font-bold text-white group-hover:text-cyber-accent mb-4">1. 影音化與碎片化</h4>
+                    <p class="text-gray-400">大家越來越懶得讀長篇大論。短影音與 Podcast 觀點將成為主流。</p>
+                </div>
+                <div class="p-8 rounded-3xl bg-cyber-gray hover:bg-cyber-purple/10 transition-colors cursor-default border border-transparent hover:border-cyber-purple/50 group">
+                    <h4 class="text-xl font-bold text-white group-hover:text-cyber-purple mb-4">2. AI 戰友現身</h4>
+                    <p class="text-gray-400">AI 將能幫你自動分析「群眾是貪婪還是恐懼」，摘要熱點話題，過濾詐騙廢文。</p>
+                </div>
+                <div class="p-8 rounded-3xl bg-cyber-gray hover:bg-cyber-pink/10 transition-colors cursor-default border border-transparent hover:border-cyber-pink/50 group">
+                    <h4 class="text-xl font-bold text-white group-hover:text-cyber-pink mb-4">3. 資訊階級化</h4>
+                    <p class="text-gray-400">真正的高手會往私密、付費的平台移動。有價值的資訊將隱藏在「付費牆」之後。</p>
+                </div>
+                <div class="p-8 rounded-3xl bg-cyber-gray hover:bg-white/10 transition-colors cursor-default border border-transparent hover:border-white/50 group">
+                    <h4 class="text-xl font-bold text-white group-hover:text-white mb-4">4. 監管常態化</h4>
+                    <p class="text-gray-400">政府的「監視器」會越來越密集。討論區將變得更精準、更有序。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <footer class="pt-24 pb-12 border-t border-gray-900">
+            <div class="max-w-3xl mx-auto text-center space-y-8">
+                <h3 class="text-3xl font-bold text-white">結語</h3>
+                <p class="text-gray-400 leading-loose italic">
+                    「在這個數位江湖裡，願我們都是清醒的航海者，而不是被巨浪沖散的碎片。下次在 PTT 或爆料同學會看到『起飛了』的口號時，別忘了先看看自己的羅盤在哪裡。」
+                </p>
+                <div class="flex flex-col items-center gap-2">
+                    <div class="w-12 h-1 bg-gradient-to-r from-cyber-accent to-cyber-purple"></div>
+                    <span class="text-xs uppercase tracking-widest text-gray-600">Article Analysis by M11416222</span>
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- Custom Cursor Glow -->
+    <div id="cursor-glow" class="fixed top-0 left-0 w-64 h-64 -translate-x-1/2 -translate-y-1/2 bg-cyber-accent opacity-5 blur-[100px] pointer-events-none z-0"></div>
+
+    <script>
+        document.addEventListener('mousemove', (e) => {
+            const glow = document.getElementById('cursor-glow');
+            glow.style.left = e.clientX + 'px';
+            glow.style.top = e.clientY + 'px';
+        });
+
+        // Simple smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
