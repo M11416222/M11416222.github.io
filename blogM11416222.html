@@ -3,350 +3,239 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>股市社交生存指南 | M11416222</title>
+    <title>杜拜巧克力：全球社群與味蕾的交響曲</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+TC:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        cyber: {
-                            black: '#050505',
-                            dark: '#0a0a0c',
-                            accent: '#00f2ff',
-                            purple: '#7000ff',
-                            pink: '#ff007a',
-                            gray: '#1a1a1e',
-                        }
+                        emerald: {
+                            50: '#f0fdf4',
+                            400: '#34d399',
+                            600: '#059669',
+                            900: '#064e3b',
+                        },
+                        pistachio: '#93C572',
+                        chocolate: '#3D1F16',
+                        gold: '#D4AF37',
                     },
                     fontFamily: {
+                        sans: ['Noto Sans TC', 'sans-serif'],
                         display: ['Outfit', 'Noto Sans TC', 'sans-serif'],
-                        body: ['Noto Sans TC', 'sans-serif'],
                     },
-                    animation: {
-                        'glow': 'glow 3s ease-in-out infinite alternate',
-                        'float': 'float 6s ease-in-out infinite',
-                    },
-                    keyframes: {
-                        glow: {
-                            '0%': { boxShadow: '0 0 5px rgba(0, 242, 255, 0.2), 0 0 10px rgba(0, 242, 255, 0.1)' },
-                            '100%': { boxShadow: '0 0 20px rgba(0, 242, 255, 0.6), 0 0 40px rgba(112, 0, 255, 0.4)' },
-                        },
-                        float: {
-                            '0%, 100%': { transform: 'translateY(0px)' },
-                            '50%': { transform: 'translateY(-20px)' },
-                        }
-                    }
                 }
             }
         }
     </script>
     <style>
         body {
-            background-color: #050505;
-            color: #e0e0e0;
+            background-color: #0c0a09;
+            color: #e7e5e4;
             overflow-x: hidden;
         }
-        .glass-card {
+        .glass {
             background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 24px;
         }
         .text-gradient {
-            background: linear-gradient(135deg, #00f2ff 0%, #7000ff 50%, #ff007a 100%);
+            background: linear-gradient(to right, #93C572, #D4AF37);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .banner-mask {
-            mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+        .hero-gradient {
+            background: radial-gradient(circle at center, rgba(147, 197, 114, 0.15) 0%, rgba(12, 10, 9, 0) 70%);
         }
-        .custom-scrollbar::-webkit-scrollbar {
-            width: 6px;
+        .bento-card {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
-        .custom-scrollbar::-webkit-scrollbar-track {
-            background: #050505;
+        .bento-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(147, 197, 114, 0.4);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
         }
-        .custom-scrollbar::-webkit-scrollbar-thumb {
-            background: #333;
-            border-radius: 10px;
+        video {
+            border-radius: 24px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
         }
-        .floating-id {
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
+        audio::-webkit-media-controls-panel {
+            background-color: #93C572;
         }
     </style>
 </head>
-<body class="font-body custom-scrollbar">
+<body class="font-sans">
 
-    <!-- Fixed Student ID Badge -->
-    <div class="fixed top-10 right-6 z-50 floating-id pointer-events-none">
-        <span class="text-cyber-accent opacity-40 font-display font-bold tracking-widest text-sm">M11416222</span>
-    </div>
-
-    <!-- Background Elements -->
-    <div class="fixed top-0 left-0 w-full h-full -z-10 overflow-hidden pointer-events-none">
-        <div class="absolute top-[-10%] left-[-10%] w-[40%] h-[40%] rounded-full bg-cyber-purple opacity-10 blur-[120px]"></div>
-        <div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] rounded-full bg-cyber-accent opacity-5 blur-[150px]"></div>
-    </div>
-
-    <!-- Header Section -->
-    <header class="relative w-full h-screen flex flex-col items-center justify-center overflow-hidden px-6">
-        <div class="absolute inset-0 z-0 opacity-60">
-            <img src='https://opal.google/board/blobs/485723eb-3493-4d80-96a4-74eacd986c7d' alt='Tech Banner' class="w-full h-full object-cover banner-mask" />
-        </div>
-        
-        <div class="relative z-10 max-w-5xl text-center space-y-6">
-            <div class="inline-block px-4 py-1 rounded-full border border-cyber-accent/30 bg-cyber-accent/10 text-cyber-accent text-sm font-bold tracking-[0.2em] mb-4 animate-pulse">
-                TECH INSIGHT 2024
-            </div>
-            <h1 class="text-5xl md:text-8xl font-display font-extrabold leading-tight tracking-tighter">
-                股市也要 <span class="text-gradient">社交？</span><br/>
-                <span class="text-white">生存指南</span>
+    <!-- Hero Section -->
+    <header class="relative pt-20 pb-12 px-6 hero-gradient overflow-hidden">
+        <div class="max-w-6xl mx-auto text-center relative z-10">
+            <span class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest uppercase bg-emerald-900/50 text-emerald-400 border border-emerald-500/30 rounded-full">
+                Global Trend Report 2024
+            </span>
+            <h1 class="font-display text-5xl md:text-7xl font-800 mb-6 leading-tight">
+                杜拜巧克力 <br>
+                <span class="text-gradient">全球社群與味蕾的交響曲</span>
             </h1>
-            <p class="text-xl md:text-2xl text-gray-400 font-light max-w-2xl mx-auto leading-relaxed">
-                從「鄉民」到「AI 戰友」的進化史，探索台灣投資界的數位社交實驗。
+            <p class="text-gray-400 max-w-2xl mx-auto text-lg leading-relaxed">
+                一場由 Fix Dessert Chocolatier 引爆的感官革命，將中東傳統食材轉化為數位時代的「社交貨幣」。
             </p>
-            <div class="pt-10">
-                <a href="#content" class="px-8 py-4 bg-white text-black font-bold rounded-full hover:bg-cyber-accent hover:text-black transition-all duration-300 transform hover:scale-105 shadow-[0_0_20px_rgba(255,255,255,0.3)]">
-                    開始探索
-                </a>
-            </div>
-        </div>
-        
-        <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce opacity-40">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
         </div>
     </header>
 
-    <main id="content" class="max-w-6xl mx-auto px-6 py-24 space-y-32">
-        
-        <!-- Intro Section -->
-        <section class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
-            <div class="md:col-span-7 space-y-6">
-                <h2 class="text-3xl font-bold text-white flex items-center gap-3">
-                    <span class="w-8 h-[2px] bg-cyber-accent"></span>
-                    前言
-                </h2>
-                <div class="text-lg text-gray-300 leading-relaxed space-y-4">
-                    <p>
-                        在金融市場裡，有一句老話說：「行情總在絕望中誕生，在半信半疑中成長。」但對現代台灣投資人而言，這句話得改一改：<span class="text-cyber-accent font-bold">行情往往是在討論區的吵架中誕生，在神人的開釋下成長。</span>
-                    </p>
-                    <p>
-                        如果您以為投資只是盯著冰冷的 K 線圖和財務指標，那您可能只觸及了股市的表層。在台灣，股市不僅是資本的博弈，更是一場宏大的「數位社交實驗」。
-                    </p>
-                </div>
+    <!-- Top: Infographic Section -->
+    <section class="max-w-6xl mx-auto px-6 mb-24">
+        <div class="relative group rounded-3xl overflow-hidden shadow-2xl border border-white/10">
+            <div class="absolute inset-0 bg-emerald-600/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <img src='https://opal.google/board/blobs/cb96376c-8548-4300-a5f8-92bfcd9ac03a' alt='杜拜巧克力全球現象資訊圖表' class="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105" />
+            <div class="absolute bottom-6 left-6 right-6 p-6 glass rounded-2xl">
+                <p class="text-sm font-medium text-emerald-400 mb-1 italic">Infographic Overview</p>
+                <h3 class="text-xl font-bold">全方位解析：起源、核心、流行與市場趨勢</h3>
             </div>
-            <div class="md:col-span-5">
-                <div class="glass-card p-8 border-cyber-accent/20 animate-glow">
-                    <div class="text-cyber-accent font-display text-4xl font-black mb-2 italic">M11416222</div>
-                    <p class="text-xs tracking-widest text-gray-500 uppercase">Verification Identity</p>
-                </div>
-            </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Bento Grid: The Five Factions -->
-        <section class="space-y-12">
-            <div class="text-center space-y-4">
-                <h2 class="text-4xl font-bold text-white">🏛️ 五大門派大點名</h2>
-                <p class="text-gray-400">你今天在哪裡灌水？</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <!-- PTT -->
-                <div class="glass-card p-8 md:col-span-2 group hover:border-cyber-purple transition-all duration-500">
-                    <div class="flex justify-between items-start mb-6">
-                        <h3 class="text-2xl font-bold text-white">PTT Stock（股票板）</h3>
-                        <span class="px-3 py-1 text-xs rounded-full bg-cyber-purple/20 text-cyber-purple border border-cyber-purple/30">江湖聖地</span>
+    <!-- Middle: Media Experience Section -->
+    <section class="bg-stone-900/50 py-24 mb-24">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <!-- Video Container -->
+                <div class="w-full lg:w-3/5 relative">
+                    <div class="absolute -inset-4 bg-emerald-500/20 blur-3xl rounded-full"></div>
+                    <div class="relative bg-black rounded-[2rem] p-2 border border-white/5">
+                        <video src='https://opal.google/board/blobs/f1860d52-8eb4-4d55-a253-cbca01800e88' alt='Dubai Chocolate ASMR' class="w-full h-auto aspect-video object-cover rounded-[1.8rem]" controls></video>
                     </div>
-                    <p class="text-gray-400 leading-relaxed mb-4">
-                        身為台灣歷史最悠久、影響力最大的 BBS 討論區，這裡是「鄉民」的聚落。想看大神曬單獲利數千萬？或是失意散戶的「畢業文」？來這裡就對了。
-                    </p>
-                    <div class="h-1 w-0 group-hover:w-full bg-cyber-purple transition-all duration-700"></div>
                 </div>
 
-                <!-- Dcard -->
-                <div class="glass-card p-8 group hover:border-cyber-accent transition-all duration-500">
-                    <h3 class="text-xl font-bold text-white mb-4">Dcard 理財板</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed mb-6">
-                        小鮮肉與小仙女的實驗室。Z 世代對財務自由的初步焦慮與嘗試，氣氛相對溫和、清新。
+                <!-- Text & Audio -->
+                <div class="w-full lg:w-2/5">
+                    <h2 class="font-display text-4xl font-bold mb-6">沉浸式感官體驗</h2>
+                    <p class="text-gray-300 mb-8 leading-relaxed">
+                        這段短影片呈現了其藝術感的外殼與標誌性的開心果和酥脆麵絲（Kataifi）內餡。感受那令人陶醉的「物理性碎裂聲」。
                     </p>
-                    <span class="text-cyber-accent text-xs font-bold">#Z世代 #理財新手</span>
-                </div>
-
-                <!-- CMoney -->
-                <div class="glass-card p-8 group hover:border-cyber-pink transition-all duration-500">
-                    <h3 class="text-xl font-bold text-white mb-4">股市爆料同學會</h3>
-                    <p class="text-gray-400 text-sm leading-relaxed">
-                        投資人的 Facebook。資訊極其零碎且快速，適合喜歡「邊打仗邊聊天」的戰士型玩家。
-                    </p>
-                </div>
-
-                <!-- Mobile01 & FB/Line -->
-                <div class="glass-card p-8 md:col-span-2 grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div>
-                        <h3 class="text-lg font-bold text-white mb-2">Mobile01 投資區</h3>
-                        <p class="text-gray-400 text-sm">追求「歲月靜好」與「穩定現金流」的熟男專區，在意退休後的尊嚴。</p>
-                    </div>
-                    <div>
-                        <h3 class="text-lg font-bold text-white mb-2">FB 社團與 LINE 群組</h3>
-                        <p class="text-gray-400 text-sm">資訊的混沌地帶。高手交流的後花園，也是詐騙集團最容易滲透的重災區。</p>
+                    <div class="p-6 glass rounded-2xl border-l-4 border-emerald-500">
+                        <p class="text-xs uppercase tracking-tighter text-emerald-400 mb-3 font-bold">Suggested Background Music</p>
+                        <audio src='https://opal.google/board/blobs/b024f84d-4ae6-485f-8b41-4a6a10a16e5e' alt='Ambient Audio' class="w-full" controls></audio>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- Time Machine Section -->
-        <section class="relative py-20">
-            <div class="absolute inset-0 bg-cyber-accent/5 -skew-y-3 rounded-[3rem]"></div>
-            <div class="relative z-10 px-8 space-y-12">
-                <h2 class="text-4xl font-bold text-center text-white italic tracking-tighter">🕰️ 時光機啟動！數位進化史</h2>
-                
-                <div class="space-y-8">
-                    <div class="flex gap-6 items-start group">
-                        <div class="text-cyber-accent font-display text-2xl font-bold pt-1 opacity-50 group-hover:opacity-100 transition-opacity">1990s</div>
-                        <div class="space-y-2">
-                            <h4 class="text-white font-bold text-xl">石器時代：BBS 的螢光火</h4>
-                            <p class="text-gray-400">散戶靠 PTT 等 BBS 站台互通有無。那是純真的年代，在黑白螢幕下點火取暖。</p>
+    <!-- Bottom: In-depth Report Section -->
+    <main class="max-w-5xl mx-auto px-6 pb-32">
+        <!-- Bento Summary -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-16">
+            <div class="bento-card glass p-6 rounded-3xl">
+                <div class="text-emerald-500 mb-4 font-bold text-2xl">01</div>
+                <h4 class="font-bold mb-2">起源背景</h4>
+                <p class="text-sm text-gray-400">Sarah Hamouda 於 2021 年在杜拜創立 Fix Dessert Chocolatier。</p>
+            </div>
+            <div class="bento-card glass p-6 rounded-3xl">
+                <div class="text-emerald-500 mb-4 font-bold text-2xl">02</div>
+                <h4 class="font-bold mb-2">核心特色</h4>
+                <p class="text-sm text-gray-400">內餡結合中東 Kataifi 麵絲與濃郁開心果醬。</p>
+            </div>
+            <div class="bento-card glass p-6 rounded-3xl">
+                <div class="text-emerald-500 mb-4 font-bold text-2xl">03</div>
+                <h4 class="font-bold mb-2">流行因子</h4>
+                <p class="text-sm text-gray-400">TikTok ASMR 病毒式傳播與每日限量的飢餓行銷。</p>
+            </div>
+            <div class="bento-card glass p-6 rounded-3xl">
+                <div class="text-emerald-500 mb-4 font-bold text-2xl">04</div>
+                <h4 class="font-bold mb-2">市場趨勢</h4>
+                <p class="text-sm text-gray-400">引發全球 DIY 浪潮，連鎖巨頭紛紛推出致敬產品。</p>
+            </div>
+        </div>
+
+        <!-- Full Report Content -->
+        <article class="prose prose-invert prose-emerald max-w-none">
+            <div class="space-y-12">
+                <section>
+                    <h3 class="text-2xl font-bold flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-lg bg-emerald-600/20 text-emerald-400 flex items-center justify-center text-sm">一</span>
+                        前言：從渴望到現象
+                    </h3>
+                    <p class="text-gray-400 leading-loose pl-11">
+                        「杜拜巧克力」（Dubai Chocolate）並非泛指，而是專指由品牌「Fix Dessert Chocolatier」推出的手工系列。創辦人 Sarah Hamouda 於 2021 年因孕期渴望而研發出的獨特配方，在 2024 年迅速跨越國界，成為最具影響力的美食趨勢。
+                    </p>
+                </section>
+
+                <section>
+                    <h3 class="text-2xl font-bold flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-lg bg-emerald-600/20 text-emerald-400 flex items-center justify-center text-sm">二</span>
+                        核心成分與感官體驗
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pl-11 mt-6">
+                        <div class="p-5 bg-white/5 rounded-xl border border-white/5">
+                            <span class="text-emerald-400 font-bold block mb-1">酥脆麵絲 (Kataifi)</span>
+                            <p class="text-sm text-gray-300">關鍵名詞。細絲狀麵皮與奶油拌炒至金黃，賦予極致碎裂聲。</p>
+                        </div>
+                        <div class="p-5 bg-white/5 rounded-xl border border-white/5">
+                            <span class="text-emerald-400 font-bold block mb-1">開心果醬 (Pistachio)</span>
+                            <p class="text-sm text-gray-300">翡翠綠的高品質開心果泥，提供濃郁堅果風味。</p>
+                        </div>
+                        <div class="p-5 bg-white/5 rounded-xl border border-white/5">
+                            <span class="text-emerald-400 font-bold block mb-1">大溪地芝麻醬 (Tahini)</span>
+                            <p class="text-sm text-gray-300">中和甜度並增加層次感。</p>
+                        </div>
+                        <div class="p-5 bg-white/5 rounded-xl border border-white/5">
+                            <span class="text-emerald-400 font-bold block mb-1">手繪巧克力殼</span>
+                            <p class="text-sm text-gray-300">如藝術品般色彩斑斕，具備極高視覺辨識度。</p>
                         </div>
                     </div>
-                    
-                    <div class="flex gap-6 items-start group">
-                        <div class="text-cyber-purple font-display text-2xl font-bold pt-1 opacity-50 group-hover:opacity-100 transition-opacity">2000s</div>
-                        <div class="space-y-2">
-                            <h4 class="text-white font-bold text-xl">大部落格時代：資訊平民化</h4>
-                            <p class="text-gray-400">Web 2.0 興起，專業走進平民。財報狗等專業平台崛起，投資研究不再是專利。</p>
-                        </div>
-                    </div>
+                </section>
 
-                    <div class="flex gap-6 items-start group">
-                        <div class="text-cyber-pink font-display text-2xl font-bold pt-1 opacity-50 group-hover:opacity-100 transition-opacity">2015s</div>
-                        <div class="space-y-2">
-                            <h4 class="text-white font-bold text-xl">大行動時代：口袋裡的賭場</h4>
-                            <p class="text-gray-400">「少年股神」湧入市場，股市討論從「非即時」轉向「盤中即時」，股市成了社交遊戲。</p>
-                        </div>
+                <section>
+                    <h3 class="text-2xl font-bold flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-lg bg-emerald-600/20 text-emerald-400 flex items-center justify-center text-sm">三</span>
+                        流量風暴：ASMR 與行銷
+                    </h3>
+                    <div class="pl-11 space-y-4 text-gray-400 leading-loose">
+                        <p><strong class="text-white">ASMR 感官行銷：</strong> TikTok 創作者 Maria Vehera 單支影片破億觀看，咬開巧克力的聲響成為強大的療癒刺激。</p>
+                        <p><strong class="text-white">飢餓行銷：</strong> 每日限量預約模式，將巧克力轉化為稀缺的「奢侈品」，極大推升購買慾望。</p>
                     </div>
-                </div>
-            </div>
-        </section>
+                </section>
 
-        <!-- Current Trends -->
-        <section class="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div class="space-y-8">
-                <h2 class="text-4xl font-bold text-white">📈 現在流行聊什麼？</h2>
-                <div class="space-y-6">
-                    <div class="p-6 rounded-2xl bg-gradient-to-r from-gray-900 to-transparent border-l-4 border-cyber-accent">
-                        <h4 class="text-white font-bold mb-2">「無腦存股」的新信仰</h4>
-                        <p class="text-gray-400 text-sm">高股息 ETF 變成全民運動。主流觀點不再是「誰賺得快」，而是「誰領得久」。</p>
-                    </div>
-                    <div class="p-6 rounded-2xl bg-gradient-to-r from-gray-900 to-transparent border-l-4 border-cyber-purple">
-                        <h4 class="text-white font-bold mb-2">反向指標「冥燈」文化</h4>
-                        <p class="text-gray-400 text-sm">台灣特有的群眾心理。對於群體瘋狂的警覺，是散戶千錘百鍊後的自產幽默。</p>
-                    </div>
-                </div>
-            </div>
-            <div class="flex items-center justify-center">
-                <div class="relative w-full aspect-square max-w-sm">
-                    <div class="absolute inset-0 bg-cyber-accent opacity-20 rounded-full blur-3xl animate-glow"></div>
-                    <div class="absolute inset-10 border-2 border-dashed border-cyber-accent/30 rounded-full animate-[spin_20s_linear_infinite]"></div>
-                    <div class="absolute inset-0 flex items-center justify-center text-center p-12">
-                        <p class="text-cyber-accent font-display text-2xl font-black uppercase tracking-widest leading-tight">
-                            Trend<br/>Insight<br/>M11416222
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+                <section>
+                    <h3 class="text-2xl font-bold flex items-center gap-3">
+                        <span class="w-8 h-8 rounded-lg bg-emerald-600/20 text-emerald-400 flex items-center justify-center text-sm">四</span>
+                        全球市場擴散
+                    </h3>
+                    <p class="text-gray-400 leading-loose pl-11">
+                        熱潮帶動了相關產業鏈：全球湧現 DIY 浪潮導致 Kataifi 缺貨；知名品牌如瑞士蓮（Lindt）及亞洲烘焙工作室紛紛推出致敬款。
+                    </p>
+                </section>
 
-        <!-- Warning Section -->
-        <section class="glass-card p-12 border-red-900/30 overflow-hidden relative">
-            <div class="absolute top-0 right-0 p-4 opacity-10">
-                <svg class="w-48 h-48 text-red-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"></path></svg>
+                <section class="p-8 bg-emerald-900/20 rounded-3xl border border-emerald-500/20">
+                    <h3 class="text-2xl font-bold mb-4 text-emerald-400">結論</h3>
+                    <p class="text-gray-300 leading-loose">
+                        杜拜巧克力的成功不僅是味覺突破，更是「視覺、聽覺、味覺」三位一體的行銷經典。它將在地文化透過流量紅利包裝，轉化為高級感的奢侈甜點，證明了在地化食材在數位時代顛覆全球市場的潛力。
+                    </p>
+                </section>
             </div>
-            <div class="relative z-10 space-y-8">
-                <h2 class="text-4xl font-bold text-white">⚠️ 股市水很深：小心韭菜！</h2>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="space-y-4">
-                        <h4 class="text-red-400 font-bold">詐騙「老師」</h4>
-                        <p class="text-sm text-gray-400">主動想帶你飛的人，通常只是想讓你當他降落時的肉墊。</p>
-                    </div>
-                    <div class="space-y-4">
-                        <h4 class="text-red-400 font-bold">網軍帶風向</h4>
-                        <p class="text-sm text-gray-400">看似研究透徹的利多，可能是主力為了出貨編織的劇本。</p>
-                    </div>
-                    <div class="space-y-4">
-                        <h4 class="text-red-400 font-bold">法規紅線</h4>
-                        <p class="text-sm text-gray-400">匿名發廢文雖痛快，但散布謠言可能觸及《證券交易法》。</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        </article>
 
-        <!-- Future AI Section -->
-        <section class="space-y-12">
-            <div class="flex flex-col md:flex-row justify-between items-end gap-6 border-b border-gray-800 pb-8">
-                <h2 class="text-5xl font-extrabold text-white">🚀 股市航海王 2.0</h2>
-                <p class="text-cyber-accent font-display tracking-[0.5em]">THE FUTURE IS AI</p>
-            </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                <div class="p-8 rounded-3xl bg-cyber-gray hover:bg-cyber-accent/10 transition-colors cursor-default border border-transparent hover:border-cyber-accent/50 group">
-                    <h4 class="text-xl font-bold text-white group-hover:text-cyber-accent mb-4">1. 影音化與碎片化</h4>
-                    <p class="text-gray-400">大家越來越懶得讀長篇大論。短影音與 Podcast 觀點將成為主流。</p>
-                </div>
-                <div class="p-8 rounded-3xl bg-cyber-gray hover:bg-cyber-purple/10 transition-colors cursor-default border border-transparent hover:border-cyber-purple/50 group">
-                    <h4 class="text-xl font-bold text-white group-hover:text-cyber-purple mb-4">2. AI 戰友現身</h4>
-                    <p class="text-gray-400">AI 將能幫你自動分析「群眾是貪婪還是恐懼」，摘要熱點話題，過濾詐騙廢文。</p>
-                </div>
-                <div class="p-8 rounded-3xl bg-cyber-gray hover:bg-cyber-pink/10 transition-colors cursor-default border border-transparent hover:border-cyber-pink/50 group">
-                    <h4 class="text-xl font-bold text-white group-hover:text-cyber-pink mb-4">3. 資訊階級化</h4>
-                    <p class="text-gray-400">真正的高手會往私密、付費的平台移動。有價值的資訊將隱藏在「付費牆」之後。</p>
-                </div>
-                <div class="p-8 rounded-3xl bg-cyber-gray hover:bg-white/10 transition-colors cursor-default border border-transparent hover:border-white/50 group">
-                    <h4 class="text-xl font-bold text-white group-hover:text-white mb-4">4. 監管常態化</h4>
-                    <p class="text-gray-400">政府的「監視器」會越來越密集。討論區將變得更精準、更有序。</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Conclusion -->
-        <footer class="pt-24 pb-12 border-t border-gray-900">
-            <div class="max-w-3xl mx-auto text-center space-y-8">
-                <h3 class="text-3xl font-bold text-white">結語</h3>
-                <p class="text-gray-400 leading-loose italic">
-                    「在這個數位江湖裡，願我們都是清醒的航海者，而不是被巨浪沖散的碎片。下次在 PTT 或爆料同學會看到『起飛了』的口號時，別忘了先看看自己的羅盤在哪裡。」
-                </p>
-                <div class="flex flex-col items-center gap-2">
-                    <div class="w-12 h-1 bg-gradient-to-r from-cyber-accent to-cyber-purple"></div>
-                    <span class="text-xs uppercase tracking-widest text-gray-600">Article Analysis by M11416222</span>
-                </div>
-            </div>
+        <!-- References -->
+        <footer class="mt-20 pt-10 border-t border-white/10">
+            <h4 class="text-sm font-bold text-gray-500 uppercase tracking-widest mb-6">引用文獻來源</h4>
+            <ul class="grid grid-cols-1 md:grid-cols-2 gap-3 text-sm text-gray-500">
+                <li class="hover:text-emerald-400 transition-colors">1. CNN (2024). "Why everyone is obsessed..."</li>
+                <li class="hover:text-emerald-400 transition-colors">2. The Guardian (2024). "The story behind Fix..."</li>
+                <li class="hover:text-emerald-400 transition-colors">3. Business Insider. "How ASMR and TikTok..."</li>
+                <li class="hover:text-emerald-400 transition-colors">4. Forbes (2024). "Market Trends..."</li>
+                <li class="hover:text-emerald-400 transition-colors">5. Eater. "The DIY movement..."</li>
+            </ul>
         </footer>
-
     </main>
 
-    <!-- Custom Cursor Glow -->
-    <div id="cursor-glow" class="fixed top-0 left-0 w-64 h-64 -translate-x-1/2 -translate-y-1/2 bg-cyber-accent opacity-5 blur-[100px] pointer-events-none z-0"></div>
+    <!-- Requested Footer -->
+    <div class="w-full bg-stone-950 py-12 border-t border-white/5 flex flex-col items-center">
+        <p class="text-gray-500 text-sm mb-2 tracking-widest">M11416222</p>
+        <div class="text-lg font-medium text-gray-300">
+            【主題探索報告】by <span class="italic text-red-600 font-bold">陳彥宇</span>
+        </div>
+    </div>
 
-    <script>
-        document.addEventListener('mousemove', (e) => {
-            const glow = document.getElementById('cursor-glow');
-            glow.style.left = e.clientX + 'px';
-            glow.style.top = e.clientY + 'px';
-        });
-
-        // Simple smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-    </script>
 </body>
 </html>
